@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+/* 300, 400, 700 */
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+html {
+    --color-bg: #0D192B;
+    --color-bgcard2: #242F43;
+    --color-txt: #FFF;
+    --color-txt2: rgba(196, 198, 231, .3);
+    --color-active: #F1D302;
+    --color-red: #C33C54;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    background-color: var(--color-bg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: inherit;
+}
+
+::selection {
+    background-color : var(--color-red);
+    color : white;
+}
+
+#card {
+    background-color: var(--color-bgcard2);
+    color: rgba(196, 198, 231, .3);
+    overflow: hidden;
+    padding: 25px;
+    min-width: 310px;
+    width: 100%;
+    max-width: 350px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px 8px rgba(0, 0, 0, .2);
+}
+
+#card .img_bloc {
+    cursor: pointer;
+    height: auto;
+    max-height: 300px;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, .2);
+}
+
+.oeil {
+    font-size: 2.2em;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: var(--color-txt);
+    background-color: rgba(241, 211, 2, .55);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+
+.img_bloc:hover .oeil {
+    display: flex;
+}
+
+#card h1 {
+    margin-top: 25px;
+    font-size: 1.7em;
+    color: var(--color-txt);
+    cursor: pointer;
+}
+
+#card h1:hover {
+    color: var(--color-active);
+}
+
+#card .sub-h1 {
+    display: block;
+    margin-top: 25px;
+    font-size: 1em;
+}
+
+.card_main {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(196, 198, 231, .3);
+    padding-bottom: 20px;
+}
+
+.card_main div i {
+    margin-right: 5px;
+}
+
+.card_main .prix, .card_main .date {
+    display: flex;
+}
+
+.card_main .prix {
+    color: var(--color-active);
+    font-weight: 700;
+}
+
+.card_footer {
+    display: flex;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.card_footer img {
+    width: 40px;
+    margin-right: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--color-txt2);
+    box-shadow: none;
+}
+
+.card_footer p a {
+    cursor: pointer;
+    color: var(--color-txt);
+}
+
+.card_footer p a:hover {
+    color: var(--color-active);
+}

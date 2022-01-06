@@ -15,7 +15,7 @@ html {
     --color-bg: #0D192B;
     --color-bgcard2: #242F43;
     --color-txt: #FFF;
-    --color-txt2: rgba(196, 198, 231, .3);
+    --color-txt2: rgba(196, 198, 231, .6);
     --color-active: #F1D302;
     --color-red: #C33C54;
 }
@@ -37,7 +37,7 @@ body {
 
 #card {
     background-color: var(--color-bgcard2);
-    color: rgba(196, 198, 231, .3);
+    color: var(--color-txt2);
     overflow: hidden;
     padding: 25px;
     min-width: 310px;
